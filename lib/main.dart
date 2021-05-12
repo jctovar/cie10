@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'src/disease_list.dart';
 import 'src/about_page.dart';
+import 'src/contact_page.dart';
 import 'routes/routes.dart';
 
 void main() {
@@ -22,6 +23,7 @@ class MyApp extends StatelessWidget {
       routes:  {
         Routes.home: (context) => DiseaseList(),
         Routes.about: (context) => AboutPage(),
+        Routes.contact: (context) => ContactPage(),
       },
     );
   }

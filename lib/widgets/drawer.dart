@@ -17,7 +17,8 @@ class AppDrawer extends StatelessWidget {
               Navigator.pushReplacementNamed(context, Routes.about)),
           Divider(),
           _createDrawerItem(
-              icon: Icons.bug_report, text: 'Reporta un error', onTap: () {}),
+              icon: Icons.bug_report, text: 'Reporta un error', onTap: () =>
+              Navigator.pushReplacementNamed(context, Routes.contact)),
           ListTile(
             title: Text('0.0.1'),
             onTap: () {},
@@ -34,17 +35,23 @@ class AppDrawer extends StatelessWidget {
         decoration: BoxDecoration(
             image: DecorationImage(
                 fit: BoxFit.fill,
-                image: AssetImage('bg3.jpg'))),
+                image: AssetImage('bg3.jpg')
+            )
+        ),
         child: Stack(children: <Widget>[
+          Image.asset("assets/logo.png", height: 128, width: 128),
           Positioned(
               bottom: 12.0,
               left: 16.0,
-              child: Text("",
+              child: Text("CIE-10",
                   style: TextStyle(
                       color: Colors.white,
                       fontSize: 20.0,
-                      fontWeight: FontWeight.w500))),
-        ]));
+                      fontWeight: FontWeight.w500)
+              )
+          ),
+        ])
+    );
   }
 
   Widget _createDrawerItem(
